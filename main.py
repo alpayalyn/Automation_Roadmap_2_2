@@ -11,7 +11,7 @@ class Person():
 
     def add_Skills(self):
 
-        yetenek = input(print("Would you like to add some skills?"))
+        yetenek = input("Which skill you want to add?")
         self.skill_list.append(yetenek)
         print(self.skill_list)
 
@@ -25,7 +25,7 @@ AbouthePerson = Person("Alpay", "Alin", "18", "Turkey", "Istanbul", ["Basketbol"
 
 while True:
 
-    answer = input(print("Do you still want to add skill into the skills list? Y / N"))
+    answer = input("Do you want to add skill into the skills list? Y / N")
 
     if(answer == "Y"):
 
@@ -36,6 +36,9 @@ while True:
 
 
     else:
+
+        lelo = AbouthePerson.Person_Info()
+        print(lelo)
 
         break
 
