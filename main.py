@@ -1,44 +1,29 @@
 class Person():
-
-    def __init__(self, name, surname, age, country, city, skill_list):
-
+    def __init__(self, name = "ALpay", surname = "Alin", age = 24, country = "Turkey", city = "Istanbul", skillList = ["Basketbol"]):
         self.name = name
         self.surname = surname
         self.age = age
         self.country = country
         self.city = city
-        self.skill_list = skill_list
+        self.skillList = skillList
 
-    def add_Skills(self):
+    def addSkills(self):
+        skill = input("Which skill you want to add?")
+        self.skillList.append(skill)
+        print(self.skillList)
 
-        yetenek = input("Which skill you want to add?")
-        self.skill_list.append(yetenek)
-        print(self.skill_list)
+    def personInformation(self):
+        return self.name, self.surname, self.age, self.country, self.city, self.skillList
 
-    def Person_Info(self):
-
-        return self.name, self.surname, self.age, self.country, self.city, self.skill_list
-
-AbouthePerson = Person("Alpay", "Alin", "18", "Turkey", "Istanbul", ["Basketbol"])
-
-
+aboutPerson = Person()
 
 while True:
-
     answer = input("Do you want to add skill into the skills list? Y / N")
 
     if(answer == "Y"):
-
-        AbouthePerson.add_Skills()
-
-        lelo = AbouthePerson.Person_Info()
-        print(lelo)
-
+        aboutPerson.addSkills()
+        print(aboutPerson.personInformation())
 
     else:
-
-        lelo = AbouthePerson.Person_Info()
-        print(lelo)
-
+        aboutPerson.personInformation()
         break
-
